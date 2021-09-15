@@ -15,6 +15,7 @@ class SongForm extends React.Component {
 
     if (this.props.id) {
       this.props.updateSong({ id: this.props.id, ...this.state });
+      this.props.toggleForm();
     } else {
       this.props.addSong({ id: Math.random(), ...this.state });
     };

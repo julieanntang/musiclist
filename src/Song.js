@@ -14,7 +14,11 @@ class Song extends React.Component {
     if (this.state.showForm) {
       return (
       <>
-        <SongForm updateSong={this.props.updateSong} {...this.props} />
+        <SongForm
+        toggleForm={this.toggleForm}
+          updateSong={this.props.updateSong} 
+          {...this.props} 
+        />
         <Button onClick={this.toggleForm} color="blue">
           Cancel
         </Button>
