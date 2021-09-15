@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Form } from "semantic-ui-react";
+import { Button, Form, Header, Segment } from "semantic-ui-react";
 
 class SongForm extends React.Component {
 
@@ -28,27 +28,28 @@ class SongForm extends React.Component {
   render() {
     return (
       <div>
-        <h1>Song Form</h1>
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Group widths="equal">
-            <Form.Input 
-            name={"title"}
-            onChange={this.handleChange}
-            value={this.state.title}
-            label="Title" 
-          />
-            <Form.Input 
-            name={"artist"}
-            onChange={this.handleChange}
-            value={this.state.artist}
-            label="Artist" 
-          />
-          </Form.Group>
-          <Button color="blue">{this.props.id ? "Update" : "Add"}</Button>
-        </Form>
+          <Header as="h2" textAlign="center">Song Form</Header>
+          <Form onSubmit={this.handleSubmit}>
+            <Form.Group widths="equal">
+              <Form.Input 
+              name={"title"}
+              onChange={this.handleChange}
+              value={this.state.title}
+              label="Title" 
+            />
+              <Form.Input 
+              name={"artist"}
+              onChange={this.handleChange}
+              value={this.state.artist}
+              label="Artist" 
+            />
+            </Form.Group>
+            <Button color="blue">{this.props.id ? "Update" : "Add"}</Button>
+          </Form>
       </div>
     );
   }
 }
+
 
 export default SongForm;
