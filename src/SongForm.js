@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Form, Header, Segment } from "semantic-ui-react";
+import styled from "styled-components";
 
 class SongForm extends React.Component {
 
@@ -27,7 +28,7 @@ class SongForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div> 
           <Header as="h2" textAlign="center">Song Form</Header>
           <Form onSubmit={this.handleSubmit}>
             <Form.Group widths="equal">
@@ -48,8 +49,20 @@ class SongForm extends React.Component {
           </Form>
       </div>
     );
+  };
+};
+
+
+const ButtonLink = styled.a`
+  hover {
+    background: pink;
   }
-}
+
+  vistited {
+    background: orange;
+  }
+`
+
 
 
 export default SongForm;
